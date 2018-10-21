@@ -37,6 +37,7 @@
     //Sign up
     const promise = auth.createUserWithEmailAndPassword(email, pass);
     promise.catch(e => console.log(e.message));
+
   });
 
   //Add a realtime listener
@@ -45,6 +46,19 @@
       console.log(firebaseUser);
       btnLogout.classList.remove('invisible');
       btnLogin.classList.add('invisible');
+      if(firebaseUser.emailVerified){
+        console.log('Email verified!');
+      }
+      else{
+        //Send email
+        var user = firebase.auth().currentUser;
+        user.sendEmailVerification().then(function() {
+          // Email sent.
+        }).catch(function(error) {
+          // An error happened.
+        });
+        console.log('Email not verified, email sent.');
+      }
     }else{
       console.log('not logged in');
       btnLogout.classList.add('invisible');
