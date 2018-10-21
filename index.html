@@ -20,31 +20,19 @@
     <title>Boki</title>
   </head>
 
-
-
-
-
   <body>
     <h1>Boki</h1>
-    <input id="email" type="email" placeholder="Email..." />
-    <input id="password" type="password" placeholder="Password..."/>
-
-    <button onclick="signup()">Sign Up</button>
+    <h2 id="txtLoginState"></h2>
+    <input id="txtemail" type="email" placeholder="Email..." />
+    <input id="txtpassword" type="password" placeholder="Password..."/>
+  </br>
+  </br>
+    <button id="btnLogin" class="btn btn-primary"> Log in </button>
+    <button id="btnSignUp" class="btn btn-secondary"> Sign Up </button>
+    <button id="btnLogout" class="btn btn-danger invisible"> Log out </button>
 
     <!-- Firebase Scripts-->
     <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
-    <script>
-      //Initializing Firebase
-      var config = {
-        apiKey: "AIzaSyDu-NZmECvg8-0WLMwEe67hdTqNX8AN12I",
-        authDomain: "boki-a2386.firebaseapp.com",
-        databaseURL: "https://boki-a2386.firebaseio.com",
-        projectId: "boki-a2386",
-        storageBucket: "",
-        messagingSenderId: "360814427555"
-      };
-      firebase.initializeApp(config);
-    </script>
     <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
