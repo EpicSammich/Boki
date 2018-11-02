@@ -1,0 +1,92 @@
+[debug] [2018-10-30T16:13:59.376Z] ----------------------------------------------------------------------
+[debug] [2018-10-30T16:13:59.378Z] Command:       /usr/local/bin/node /Users/Malik/npm-global/bin/firebase serve --only hosting
+[debug] [2018-10-30T16:13:59.379Z] CLI Version:   6.0.0
+[debug] [2018-10-30T16:13:59.379Z] Platform:      darwin
+[debug] [2018-10-30T16:13:59.379Z] Node Version:  v10.13.0
+[debug] [2018-10-30T16:13:59.380Z] Time:          Tue Oct 30 2018 12:13:59 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-10-30T16:13:59.380Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-10-30T16:13:59.389Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-30T16:13:59.390Z] > authorizing via signed-in user
+[debug] [2018-10-30T16:13:59.390Z] [iam] checking project boki-a2386 for permissions ["firebase.projects.get"]
+[debug] [2018-10-30T16:13:59.392Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/boki-a2386:testIamPermissions  
+
+[debug] [2018-10-30T16:13:59.831Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-30T16:13:59.833Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/boki-a2386  
+ 
+[debug] [2018-10-30T16:14:00.141Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/Malik/Desktop/friendlychat-web/web-start'...
+[info] 
+[debug] [2018-10-30T16:14:00.144Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/360814427555/clients/_:getWebAppConfig  
+ 
+[debug] [2018-10-30T16:14:00.897Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2018-10-30T16:18:39.148Z] ----------------------------------------------------------------------
+[debug] [2018-10-30T16:18:39.151Z] Command:       /usr/local/bin/node /Users/Malik/npm-global/bin/firebase serve
+[debug] [2018-10-30T16:18:39.151Z] CLI Version:   6.0.0
+[debug] [2018-10-30T16:18:39.151Z] Platform:      darwin
+[debug] [2018-10-30T16:18:39.151Z] Node Version:  v10.13.0
+[debug] [2018-10-30T16:18:39.152Z] Time:          Tue Oct 30 2018 12:18:39 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-10-30T16:18:39.152Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-10-30T16:18:39.161Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-30T16:18:39.161Z] > authorizing via signed-in user
+[debug] [2018-10-30T16:18:39.162Z] [iam] checking project boki-a2386 for permissions ["firebase.projects.get"]
+[debug] [2018-10-30T16:18:39.163Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/boki-a2386:testIamPermissions  
+
+[debug] [2018-10-30T16:18:39.480Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-30T16:18:39.481Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/boki-a2386  
+ 
+[debug] [2018-10-30T16:18:39.721Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/Malik/Desktop/friendlychat-web/web-start'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-10-30T16:18:40.629Z] Fetching environment
+[debug] [2018-10-30T16:18:40.631Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/360814427555:getServerAppConfig  
+ 
+[debug] [2018-10-30T16:18:40.632Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/360814427555/clients/_:getWebAppConfig  
+ 
+[debug] [2018-10-30T16:18:40.947Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-30T16:18:40.947Z] Starting @google-cloud/functions-emulator
+[debug] [2018-10-30T16:18:41.140Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[info] i  hosting: Serving hosting files from: ./
+[info] ✔  hosting: Local server: http://localhost:5005
+[debug] [2018-10-30T16:18:42.506Z] Parsing function triggers
+[info] i  functions: No HTTPS functions found. Use firebase functions:shell if you would like to emulate other types of functions.
+[debug] [2018-10-30T16:31:44.505Z] ----------------------------------------------------------------------
+[debug] [2018-10-30T16:31:44.507Z] Command:       /usr/local/bin/node /Users/Malik/npm-global/bin/firebase serve
+[debug] [2018-10-30T16:31:44.507Z] CLI Version:   6.0.0
+[debug] [2018-10-30T16:31:44.507Z] Platform:      darwin
+[debug] [2018-10-30T16:31:44.508Z] Node Version:  v10.13.0
+[debug] [2018-10-30T16:31:44.508Z] Time:          Tue Oct 30 2018 12:31:44 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-10-30T16:31:44.508Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-10-30T16:31:44.518Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-30T16:31:44.518Z] > authorizing via signed-in user
+[debug] [2018-10-30T16:31:44.518Z] [iam] checking project boki-a2386 for permissions ["firebase.projects.get"]
+[debug] [2018-10-30T16:31:44.520Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/boki-a2386:testIamPermissions  
+
+[debug] [2018-10-30T16:31:44.892Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-30T16:31:44.893Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/boki-a2386  
+ 
+[debug] [2018-10-30T16:31:45.129Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/Malik/Desktop/friendlychat-web/web-start'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-10-30T16:31:45.537Z] Fetching environment
+[debug] [2018-10-30T16:31:45.540Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/360814427555:getServerAppConfig  
+ 
+[debug] [2018-10-30T16:31:45.540Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/360814427555/clients/_:getWebAppConfig  
+ 
+[debug] [2018-10-30T16:31:45.916Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-30T16:31:45.916Z] Starting @google-cloud/functions-emulator
+[debug] [2018-10-30T16:31:46.107Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2018-10-30T16:31:46.969Z] Parsing function triggers
+[info] i  functions: No HTTPS functions found. Use firebase functions:shell if you would like to emulate other types of functions.
