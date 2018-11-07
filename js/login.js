@@ -22,18 +22,20 @@
 
 
   //Add login event
-  btnLogin.addEventListener('click', e => {
-    //Get email and pass
-    const email = txtEmail.value;
-    const pass = txtPassword.value;
-    const auth = firebase.auth();
-    //Sign In
-    const promise = auth.signInWithEmailAndPassword(email, pass);
-    promise.catch(e => console.log(e.message));
-  });
-
+  if(btnLogin != null){
+    btnLogin.addEventListener('click', e => {
+      //Get email and pass
+      const email = txtEmail.value;
+      const pass = txtPassword.value;
+      const auth = firebase.auth();
+      //Sign In
+      const promise = auth.signInWithEmailAndPassword(email, pass);
+      promise.catch(e => console.log(e.message));
+    });
+  }
 
   //Add signup event
+if(btnSignUp != null){
   btnSignUp.addEventListener('click', e => {
     //Get email and pass
     //TODO: Check for real email!
@@ -97,15 +99,13 @@
     promise.catch(e => console.log(e.message));
 
   });
-
+}
 
 
   //Add a realtime listener
   firebase.auth().onAuthStateChanged(firebaseUser => {
     if(firebaseUser){
       console.log(firebaseUser);
-      btnLogout.classList.remove('invisible');
-      btnLogin.classList.add('invisible');
       if(firebaseUser.emailVerified){
         console.log('Email verified!');
       }
@@ -119,19 +119,21 @@
         });
         console.log('Email not verified, email sent.');
       }
+      window.location = "homepage.html";
     }else{
       console.log('not logged in');
-      btnLogout.classList.add('invisible');
-      btnLogin.classList.remove('invisible');
+      //TODO: Make sure site redirects to login page without an endless loop
     }
   });
 
 
 
   //Add logout event
+if(btnLogout != null){
   btnLogout.addEventListener('click', e => {
     firebase.auth().signOut();
   });
+}
 }());
 
 
