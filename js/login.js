@@ -119,9 +119,14 @@ if(btnSignUp != null){
         });
         console.log('Email not verified, email sent.');
       }
-      window.location = "homepage.html";
+      if (window.location.href == 'http://localhost/index.html' ) {
+        window.location.replace("http://localhost/homepage.html")
+      }
     }else{
       console.log('not logged in');
+      if (window.location.href == 'http://localhost/homepage.html' ) {
+        window.location.replace("http://localhost/index.html")
+      }
       //TODO: Make sure site redirects to login page without an endless loop
     }
   });

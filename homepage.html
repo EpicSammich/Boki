@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html>
+<!-- Required meta tags -->
 <title>BOKI</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<!--Firebase CSS-->
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.css" />
+<!--Custom CSS compiled with Sass (use VS Code to compile Sass code)-->
+<link rel="stylesheet" href="css/main.min.css">
 <link rel="stylesheet" href="bokiHomePage.css">
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <body>
 
 <!-- Navbar (sit on top) -->
@@ -15,7 +26,7 @@
 	  <a href="#Profile" class="bar-item button">Profile</a>
 	  <a href="#Messaging" class="bar-item button">Messaging</a>
       <a href="#PendingProjects" class="bar-item button">Pending Projects</a>
-	  <a href="#LogOut" class="bar-item button">Log Out</a>
+	  <button id="btnLogout" href="index.html" class="bar-item button">Log Out</button>
     </div>
   </div>
 </div>
@@ -39,22 +50,22 @@
   <div class="row-padding">
     <div class="col l3 m6 margin-bottom">
       <div class="display-container">
-        <img src="Project1.jpg" alt="abstract" style="width:100%">
+        <img src="assets/Project1.jpg" alt="abstract" style="width:100%">
       </div>
     </div>
     <div class="col l3 m6 margin-bottom">
       <div class="display-container">
-        <img src="Project2.jpg" alt="lady with umbrella" style="width:100%">
+        <img src="assets/Project2.jpg" alt="lady with umbrella" style="width:100%">
       </div>
     </div>
     <div class="col l3 m6 margin-bottom">
       <div class="display-container">
-        <img src="Project3.jpg" alt="lady butterfly" style="width:100%">
+        <img src="assets/Project3.jpg" alt="lady butterfly" style="width:100%">
       </div>
     </div>
     <div class="col l3 m6 margin-bottom">
       <div class="display-container">
-        <img src="Project4.jpg" alt="horses" style="width:100%">
+        <img src="assets/Project4.jpg" alt="horses" style="width:100%">
       </div>
     </div>
   </div>
@@ -62,22 +73,22 @@
   <div class="row-padding">
     <div class="col l3 m6 margin-bottom">
       <div class="display-container">
-        <img src="Project5.jpg" alt="Genius" style="width:99%">
+        <img src="assets/Project5.jpg" alt="Genius" style="width:99%">
       </div>
     </div>
     <div class="col l3 m6 margin-bottom">
       <div class="display-container">
-        <img src="Project6.jpg" alt="abstract" style="width:99%">
+        <img src="assets/Project6.jpg" alt="abstract" style="width:99%">
       </div>
     </div>
     <div class="col l3 m6 margin-bottom">
       <div class="display-container">
-        <img src="Project7.jpg" alt="abstract" style="width:99%">
+        <img src="assets/Project7.jpg" alt="abstract" style="width:99%">
       </div>
     </div>
     <div class="col l3 m6 margin-bottom">
       <div class="display-container">
-        <img src="Project8.jpg" alt="forest" style="width:99%">
+        <img src="assets/Project8.jpg" alt="forest" style="width:99%">
       </div>
     </div>
   </div>
@@ -90,28 +101,28 @@
 
   <div class="row-padding grayscale">
     <div class="col l3 m6 margin-bottom">
-      <img src="artist_silhouette.jpg" alt="John" style="width:100%">
+      <img src="assets/artist_silhouette.jpg" alt="John" style="width:100%">
       <h3>John Doe</h3>
       <p class="opacity">Top Ranked Artist</p>
       <p>Rating reflects customer satisfaction of completed projects.</p>
       <p><button class="button light-grey block">Contact</button></p>
     </div>
     <div class="col l3 m6 margin-bottom">
-      <img src="artist_silhouette.jpg" alt="Jane" style="width:100%">
+      <img src="assets/artist_silhouette.jpg" alt="Jane" style="width:100%">
       <h3>Jane Doe</h3>
       <p class="opacity">Top Ranked Artist</p>
       <p>Rating reflects customer satisfaction of completed projects.</p>
       <p><button class="button light-grey block">Contact</button></p>
     </div>
     <div class="col l3 m6 margin-bottom">
-      <img src="artist_silhouette.jpg" alt="Nade" style="width:100%">
+      <img src="assets/artist_silhouette.jpg" alt="Nade" style="width:100%">
       <h3>Nade Ode</h3>
       <p class="opacity">Top Ranked Artist</p>
       <p>Rating reflects customer satisfaction of completed projects.</p>
       <p><button class="button light-grey block">Contact</button></p>
     </div>
     <div class="col l3 m6 margin-bottom">
-      <img src="artist_silhouette.jpg" alt="Dane" style="width:100%">
+      <img src="assets/artist_silhouette.jpg" alt="Dane" style="width:100%">
       <h3>Dane Joe</h3>
       <p class="opacity">Top Ranked Artist</p>
       <p>Rating reflects customer satisfaction of completed projects.</p>
@@ -133,9 +144,18 @@
       </button>
     </form>
   </div>
-
 <!-- End page content -->
 </div>
 
+<!-- Firebase Scripts-->
+<script src="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-functions.js"></script>
+<!--Custom Scripts-->
+<script src="js/login.js"></script>
 </body>
 </html>
