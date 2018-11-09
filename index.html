@@ -1,44 +1,91 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+* {
+    box-sizing: border-box;
+}
 
+.bg-img {
+    /* The image used */
+    background-image: url("boki_frog.jpg");
 
-    <script src="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.css" />
-    <link rel="stylesheet" href="css/main.css">
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    min-height: 100%;
 
-    <title>Boki</title>
-  </head>
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
 
-  <body>
+/* Add styles to the form container */
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 20px;
+    max-width: 300px;
+    padding: 16px;
+    background-color: white;
+}
 
-    <div class="login-card">
-      <h1>Log-in</h1><br>
-      <input id="txtemail" type="text" name="user" autocomplete="email" placeholder="Email...">
-      <input id="txtpassword" type="password" name="pass" placeholder="Password...">
-      <button id="btnLogin" class="login-signup-button"> Log in </button>
-  
-    <div class="login-help">
-      <a href="signup.html">Register</a> • <a href="#">Forgot Password</a>
-    </div>
-  </div>
-    <!-- Firebase Scripts-->
-    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-messaging.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-functions.js"></script>
-    <script src="js/login.js"></script>
-  </body>
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+</style>
+</head>
+<body>
+<div class="bg-img">
+  <form action="homepage.html" class="container">
+    <h1>BOKI</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+	<button type="submit" class="btn">Login</button>
+	<div class="login-help">
+		<a href="signup.html">Register</a>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		<a href="passwordreset.html">Forgot Password</a>
+	</div>
+  </form>
+</div>
+
+</body>
 </html>
