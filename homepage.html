@@ -1,36 +1,141 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE html>
+<html>
+<title>BOKI</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="bokiHomePage.css">
+<body>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<!-- Navbar (sit on top) -->
+<div class="top">
+  <div class="bar white wide padding card">
+    <a href="#home" class="bar-item button"><b>BOKI</b></a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="right hide-small">
+	  <a href="#Profile" class="bar-item button">Profile</a>
+	  <a href="#Messaging" class="bar-item button">Messaging</a>
+      <a href="#PendingProjects" class="bar-item button">Pending Projects</a>
+	  <a href="#LogOut" class="bar-item button">Log Out</a>
+    </div>
+  </div>
+</div>
 
+<!-- Header -->
+<header class="display-container content wide" style="max-width:1500px;" id="home">
+  <img class="image" src="boki_logo.jpg" alt="" width="1500" height="800">
+  <div class="display-middle margin-top center">
+    <h1 class="xxlarge text-white"><span class="padding black opacity-min"><b>Expression</b></span> <span class="hide-small text-light-grey">Personified</span></h1>
+  </div>
+</header>
 
-    <script src="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.css" />
-    <link rel="stylesheet" href="css/main.css">
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<!-- Page content -->
+<div class="content padding" style="max-width:1564px">
 
-    <title>Boki</title>
-  </head>
+  <!-- Project Section -->
+  <div class="container padding-32" id="projects">
+    <h3 class="border-bottom border-light-grey padding-16">Recent Projects</h3>
+  </div>
 
-  <body>
+  <div class="row-padding">
+    <div class="col l3 m6 margin-bottom">
+      <div class="display-container">
+        <img src="Project1.jpg" alt="abstract" style="width:100%">
+      </div>
+    </div>
+    <div class="col l3 m6 margin-bottom">
+      <div class="display-container">
+        <img src="Project2.jpg" alt="lady with umbrella" style="width:100%">
+      </div>
+    </div>
+    <div class="col l3 m6 margin-bottom">
+      <div class="display-container">
+        <img src="Project3.jpg" alt="lady butterfly" style="width:100%">
+      </div>
+    </div>
+    <div class="col l3 m6 margin-bottom">
+      <div class="display-container">
+        <img src="Project4.jpg" alt="horses" style="width:100%">
+      </div>
+    </div>
+  </div>
 
-      <button id="btnLogout" class="login-signup-button"> Log Out </button>
+  <div class="row-padding">
+    <div class="col l3 m6 margin-bottom">
+      <div class="display-container">
+        <img src="Project5.jpg" alt="Genius" style="width:99%">
+      </div>
+    </div>
+    <div class="col l3 m6 margin-bottom">
+      <div class="display-container">
+        <img src="Project6.jpg" alt="abstract" style="width:99%">
+      </div>
+    </div>
+    <div class="col l3 m6 margin-bottom">
+      <div class="display-container">
+        <img src="Project7.jpg" alt="abstract" style="width:99%">
+      </div>
+    </div>
+    <div class="col l3 m6 margin-bottom">
+      <div class="display-container">
+        <img src="Project8.jpg" alt="forest" style="width:99%">
+      </div>
+    </div>
+  </div>
 
-    <!-- Firebase Scripts-->
-    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-messaging.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-functions.js"></script>
-    <script src="js/login.js"></script>
-  </body>
+  <!-- About Section -->
+  <div class="container padding-32" id="about">
+    <h3 class="border-bottom border-light-grey padding-16">About</h3>
+    <p>A meeting place for the talented artist and the connoisseur with a discerning eye.</p>
+  </div>
+
+  <div class="row-padding grayscale">
+    <div class="col l3 m6 margin-bottom">
+      <img src="artist_silhouette.jpg" alt="John" style="width:100%">
+      <h3>John Doe</h3>
+      <p class="opacity">Top Ranked Artist</p>
+      <p>Rating reflects customer satisfaction of completed projects.</p>
+      <p><button class="button light-grey block">Contact</button></p>
+    </div>
+    <div class="col l3 m6 margin-bottom">
+      <img src="artist_silhouette.jpg" alt="Jane" style="width:100%">
+      <h3>Jane Doe</h3>
+      <p class="opacity">Top Ranked Artist</p>
+      <p>Rating reflects customer satisfaction of completed projects.</p>
+      <p><button class="button light-grey block">Contact</button></p>
+    </div>
+    <div class="col l3 m6 margin-bottom">
+      <img src="artist_silhouette.jpg" alt="Nade" style="width:100%">
+      <h3>Nade Ode</h3>
+      <p class="opacity">Top Ranked Artist</p>
+      <p>Rating reflects customer satisfaction of completed projects.</p>
+      <p><button class="button light-grey block">Contact</button></p>
+    </div>
+    <div class="col l3 m6 margin-bottom">
+      <img src="artist_silhouette.jpg" alt="Dane" style="width:100%">
+      <h3>Dane Joe</h3>
+      <p class="opacity">Top Ranked Artist</p>
+      <p>Rating reflects customer satisfaction of completed projects.</p>
+      <p><button class="button light-grey block">Contact</button></p>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="container padding-32" id="contact">
+    <h3 class="border-bottom border-light-grey padding-16">Contact</h3>
+    <p>Lets get in touch and talk about your next project.</p>
+    <form action="/action_page.php" target="_blank">
+      <input class="input border" type="text" placeholder="Name" required name="Name">
+      <input class="input section border" type="text" placeholder="Email" required name="Email">
+      <input class="input section border" type="text" placeholder="Subject" required name="Subject">
+      <input class="input section border" type="text" placeholder="Comment" required name="Comment">
+      <button class="button black section" type="submit">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
+    </form>
+  </div>
+
+<!-- End page content -->
+</div>
+
+</body>
 </html>
