@@ -10,6 +10,8 @@
     messagingSenderId: "360814427555"
   };
   firebase.initializeApp(config);
+//get ref to database
+  var database = firebase.database(); 
 
   //Get elements from HTML DOM
   const txtEmail = document.getElementById('txtemail');
@@ -18,6 +20,11 @@
   const btnSignUp = document.getElementById('btnSignUp');
   const btnLogin = document.getElementById('btnLogin');
   const btnLogout = document.getElementById('btnLogout');
+  const txtfname = document.getElementById('txtfname');
+  const txtlname = document.getElementById('txtlname');
+  const txtusername = document.getElementById('txtusername');
+  const radusertype = document.getElementById('radusertype');
+
 
 
 
@@ -101,6 +108,15 @@ if(btnSignUp != null){
     //Sign up with Firebase
     const promise = auth.createUserWithEmailAndPassword(email, pass);
     promise.catch(e => console.log(e.message));
+     //Create user profile in Database   
+    firebase.database().ref('/userProfiles/' + txtusername.value).set({
+    user_email: txtEmail.value,
+    user_fname: txtfname.value,
+    user_lname: txtlname.value,
+    user_username: txtusername.value,    
+    usertype: radusertype.value,
+    userrate: 0    
+    });
 
   });
 }
