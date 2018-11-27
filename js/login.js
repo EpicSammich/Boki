@@ -22,6 +22,7 @@
   const btnLogout = document.getElementById('btnLogout');
   const txtfname = document.getElementById('txtfname');
   const txtlname = document.getElementById('txtlname');
+  const txtportf = document.getElementById('txtportf');  
   const txtusername = document.getElementById('txtusername');
   const radusertype = document.getElementById('radusertype');
 
@@ -113,9 +114,12 @@ if(btnSignUp != null){
     user_email: txtEmail.value,
     user_fname: txtfname.value,
     user_lname: txtlname.value,
-    user_username: txtusername.value,    
+    user_username: txtusername.value, 
+    userportf: txtportf.value, 
     usertype: radusertype.value,
-    userrate: 0    
+    userrate: 0,
+    userrate_amount: 0,
+    userrate_total: 0    
     });
 
   });

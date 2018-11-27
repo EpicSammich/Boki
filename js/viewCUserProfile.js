@@ -6,12 +6,11 @@ var ref = db.ref("/userProfiles/");
 var user = firebase.auth().currentUser;
 
 //Useful varibles
-var firstname, lastname, username, userrole, userrating, usertotrate, useemail;
+var firstname, lastname, username, userrole, userrating, usertotrate, useemail, cuseremail, portflink;
 
 
 if(user != null)
     {
-        console.log("inside");
      useemail = user.email;
      ref.orderByChild('user_email').equalTo(useemail).on("value", function(viewCProfile){
          viewCProfile.forEach(function (getthechild)
@@ -23,9 +22,13 @@ if(user != null)
              userrole = valUser.usertype;
              userrating = valUser.userrate;
              usertotrate = valUser.userrate_amount;
+             cuseremail = valUser.user_email;
+             portflink = valUser.userportf;
              document.getElementById("thisUserUname").innerHTML = username;
              document.getElementById("thisUserFname").innerHTML = firstname;
              document.getElementById("thisUserLname").innerHTML = lastname;
+             document.getElementById("thisUserCemail").innerHTML = cuseremail;
+             document.getElementById("thisUserPortf").innerHTML = portflink;
              document.getElementById("thisUserRole").innerHTML = userrole;
              document.getElementById("thisUserRating").innerHTML = userrating;
              document.getElementById("thisUserTotalRatings").innerHTML = usertotrate;
