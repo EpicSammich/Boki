@@ -5,12 +5,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<!--Firebase CSS-->
-<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.css" />
-<!--Custom CSS compiled with Sass (use VS Code to compile Sass code)-->
-<link rel="stylesheet" href="css/main.min.css">
-<link rel="stylesheet" href="bokiHomePage.css">
+<link rel="stylesheet" href="css/bokiHomePage.css">
+<link rel="stylesheet" href="css/slideshow.css">
+<link rel="stylesheet" href="css/rating.css">
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -33,7 +30,7 @@
 
 <!-- Header -->
 <header class="display-container content wide" style="max-width:1500px;" id="home">
-  <img class="image" src="boki_logo.jpg" alt="" width="1500" height="800">
+  <img class="image" src="assets/boki_logo.jpg" alt="" width="1500" height="800">
   <div class="display-middle margin-top center">
     <h1 class="xxlarge text-white"><span class="padding black opacity-min"><b>Expression</b></span> <span class="hide-small text-light-grey">Personified</span></h1>
   </div>
@@ -42,61 +39,81 @@
 <!-- Page content -->
 <div class="content padding" style="max-width:1564px">
 
-  <!-- Project Section -->
-  <div class="container padding-32" id="projects">
-    <h3 class="border-bottom border-light-grey padding-16">Recent Projects</h3>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+  <h1>Recent Projects</h1>
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <img src="assets/project1.jpg" style="width:100%">
   </div>
 
-  <div class="row-padding">
-    <div class="col l3 m6 margin-bottom">
-      <div class="display-container">
-        <img src="assets/Project1.jpg" alt="abstract" style="width:100%">
-      </div>
-    </div>
-    <div class="col l3 m6 margin-bottom">
-      <div class="display-container">
-        <img src="assets/Project2.jpg" alt="lady with umbrella" style="width:100%">
-      </div>
-    </div>
-    <div class="col l3 m6 margin-bottom">
-      <div class="display-container">
-        <img src="assets/Project3.jpg" alt="lady butterfly" style="width:100%">
-      </div>
-    </div>
-    <div class="col l3 m6 margin-bottom">
-      <div class="display-container">
-        <img src="assets/Project4.jpg" alt="horses" style="width:100%">
-      </div>
-    </div>
+  <div class="mySlides fade">
+    <img src="assets/project2.jpg" style="width:100%">
   </div>
 
-  <div class="row-padding">
-    <div class="col l3 m6 margin-bottom">
-      <div class="display-container">
-        <img src="assets/Project5.jpg" alt="Genius" style="width:99%">
-      </div>
-    </div>
-    <div class="col l3 m6 margin-bottom">
-      <div class="display-container">
-        <img src="assets/Project6.jpg" alt="abstract" style="width:99%">
-      </div>
-    </div>
-    <div class="col l3 m6 margin-bottom">
-      <div class="display-container">
-        <img src="assets/Project7.jpg" alt="abstract" style="width:99%">
-      </div>
-    </div>
-    <div class="col l3 m6 margin-bottom">
-      <div class="display-container">
-        <img src="assets/Project8.jpg" alt="forest" style="width:99%">
-      </div>
-    </div>
+  <div class="mySlides fade">
+    <img src="assets/project3.jpg" style="width:100%">
   </div>
+
+  <div class="mySlides fade">
+    <img src="assets/project4.jpg" style="width:100%">
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="assets/project5.jpg" style="width:100%">
+  </div>
+  
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
 
   <!-- About Section -->
   <div class="container padding-32" id="about">
     <h3 class="border-bottom border-light-grey padding-16">About</h3>
-    <p>A meeting place for the talented artist and the connoisseur with a discerning eye.</p>
+    <p>BOKI is a meeting place for the talented artist and the connoisseur with a discerning eye.</p>
+	<p>Create a profile to either showcase and sell your work, accept commissions, or commission</p>
+	<p>an artist to create the next masterpiece. For commissioned work, payment is negotiated</p>
+	<p>between the artist and client. Prices for showcased artwork are set by the artist.</p>
   </div>
 
   <div class="row-padding grayscale">
@@ -104,36 +121,92 @@
       <img src="assets/artist_silhouette.jpg" alt="John" style="width:100%">
       <h3>John Doe</h3>
       <p class="opacity">Top Ranked Artist</p>
+	  <div class="stars">
+		<form action="">
+		  <input class="star star-5" id="star-5" type="radio" name="star"/>
+		  <label class="star star-5" for="star-5"></label>
+		  <input class="star star-4" id="star-4" type="radio" name="star"/>
+		  <label class="star star-4" for="star-4"></label>
+		  <input class="star star-3" id="star-3" type="radio" name="star"/>
+		  <label class="star star-3" for="star-3"></label>
+		  <input class="star star-2" id="star-2" type="radio" name="star"/>
+		  <label class="star star-2" for="star-2"></label>
+		  <input class="star star-1" id="star-1" type="radio" name="star"/>
+		  <label class="star star-1" for="star-1"></label>
+		</form>
+	  </div>
       <p>Rating reflects customer satisfaction of completed projects.</p>
-      <p><button class="button light-grey block">Contact</button></p>
+      <a href="cUserProfile.html"><button class="button light-grey block">Contact</button> </a>
     </div>
     <div class="col l3 m6 margin-bottom">
       <img src="assets/artist_silhouette.jpg" alt="Jane" style="width:100%">
       <h3>Jane Doe</h3>
       <p class="opacity">Top Ranked Artist</p>
-      <p>Rating reflects customer satisfaction of completed projects.</p>
-      <p><button class="button light-grey block">Contact</button></p>
+	  <div class="stars">
+		<form action="">
+		  <input class="star star-5" id="star-5" type="radio" name="star"/>
+		  <label class="star star-5" for="star-5"></label>
+		  <input class="star star-4" id="star-4" type="radio" name="star"/>
+		  <label class="star star-4" for="star-4"></label>
+		  <input class="star star-3" id="star-3" type="radio" name="star"/>
+		  <label class="star star-3" for="star-3"></label>
+		  <input class="star star-2" id="star-2" type="radio" name="star"/>
+		  <label class="star star-2" for="star-2"></label>
+		  <input class="star star-1" id="star-1" type="radio" name="star"/>
+		  <label class="star star-1" for="star-1"></label>
+		</form>
+	  </div>
+	  <p>Rating reflects customer satisfaction of completed projects.</p>
+      <a href="cUserProfile.html"><button class="button light-grey block">Contact</button> </a>
     </div>
     <div class="col l3 m6 margin-bottom">
       <img src="assets/artist_silhouette.jpg" alt="Nade" style="width:100%">
       <h3>Nade Ode</h3>
       <p class="opacity">Top Ranked Artist</p>
-      <p>Rating reflects customer satisfaction of completed projects.</p>
-      <p><button class="button light-grey block">Contact</button></p>
+	  <div class="stars">
+		<form action="">
+		  <input class="star star-5" id="star-5" type="radio" name="star"/>
+		  <label class="star star-5" for="star-5"></label>
+		  <input class="star star-4" id="star-4" type="radio" name="star"/>
+		  <label class="star star-4" for="star-4"></label>
+		  <input class="star star-3" id="star-3" type="radio" name="star"/>
+		  <label class="star star-3" for="star-3"></label>
+		  <input class="star star-2" id="star-2" type="radio" name="star"/>
+		  <label class="star star-2" for="star-2"></label>
+		  <input class="star star-1" id="star-1" type="radio" name="star"/>
+		  <label class="star star-1" for="star-1"></label>
+		</form>
+	  </div>
+	  <p>Rating reflects customer satisfaction of completed projects.</p>
+      <a href="cUserProfile.html"><button class="button light-grey block">Contact</button> </a>
     </div>
     <div class="col l3 m6 margin-bottom">
       <img src="assets/artist_silhouette.jpg" alt="Dane" style="width:100%">
       <h3>Dane Joe</h3>
       <p class="opacity">Top Ranked Artist</p>
-      <p>Rating reflects customer satisfaction of completed projects.</p>
-      <p><button class="button light-grey block">Contact</button></p>
+	  <div class="stars">
+		<form action="">
+		  <input class="star star-5" id="star-5" type="radio" name="star"/>
+		  <label class="star star-5" for="star-5"></label>
+		  <input class="star star-4" id="star-4" type="radio" name="star"/>
+		  <label class="star star-4" for="star-4"></label>
+		  <input class="star star-3" id="star-3" type="radio" name="star"/>
+		  <label class="star star-3" for="star-3"></label>
+		  <input class="star star-2" id="star-2" type="radio" name="star"/>
+		  <label class="star star-2" for="star-2"></label>
+		  <input class="star star-1" id="star-1" type="radio" name="star"/>
+		  <label class="star star-1" for="star-1"></label>
+		</form>
+	  </div>
+	  <p>Rating reflects customer satisfaction of completed projects.</p>
+      <a href="cUserProfile.html"><button class="button light-grey block">Contact</button> </a>
     </div>
   </div>
-
+  
   <!-- Contact Section -->
   <div class="container padding-32" id="contact">
     <h3 class="border-bottom border-light-grey padding-16">Contact</h3>
-    <p>Lets get in touch and talk about your next project.</p>
+    <p>Lets get in touch to discuss your next project.</p>
     <form action="/action_page.php" target="_blank">
       <input class="input border" type="text" placeholder="Name" required name="Name">
       <input class="input section border" type="text" placeholder="Email" required name="Email">
@@ -144,6 +217,7 @@
       </button>
     </form>
   </div>
+
 <!-- End page content -->
 </div>
 
