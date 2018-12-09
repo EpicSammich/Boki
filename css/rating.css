@@ -39,10 +39,16 @@ input.star3-5:checked ~ label.star:before {
   text-shadow: 0 0 20px #952;
 }
 
+input.star_total-5:checked ~ label.star:before {
+  color: #FE7;
+  text-shadow: 0 0 20px #952;
+}
+
 input.star-1:checked ~ label.star:before { color: #F62; }
 input.star1-1:checked ~ label.star:before { color: #F62; }
 input.star2-1:checked ~ label.star:before { color: #F62; }
 input.star3-1:checked ~ label.star:before { color: #F62; }
+input.star_total-1:checked ~ label.star:before { color: #F62; }
 
 label.star:hover { transform: rotate(-15deg) scale(1.3); }
 

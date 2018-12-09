@@ -15,15 +15,16 @@
 <body>
 
 <!-- Navbar (sit on top) -->
-  <div class="top">
+<div class="top">
   <div class="bar white wide padding card">
-    <a href="/homepage.html" class="bar-item button"><b>BOKI</b></a>
+	<a href="/homepage.html" class="bar-item button"><b>BOKI</b></a>
     <!-- Float links to the right. Hide them on small screens -->
     <div class="right hide-small">
 	  <a href="/cUserProfile.html" class="bar-item button">Profile</a>
-        <a href="/userDirPage.html" class="bar-item button">Directory</a>
-	  <a href="#Messaging" class="bar-item button">Messaging</a>
-      <a href="#PendingProjects" class="bar-item button">Pending Projects</a>
+      <a href="/userDirPage.html" class="bar-item button">Directory</a>
+	  <a href="#toprated" class="bar-item button">Top Artists</a>
+      <a href="#recent" class="bar-item button">Recent Projects</a>
+	  <a href="contact.php" class="bar-item button">Contact Us</a>
 	  <button id="btnLogout" href="index.html" class="bar-item button">Log Out</button>
     </div>
   </div>
@@ -41,7 +42,7 @@
 <div class="content padding" style="max-width:1564px">
 
 <!-- Slideshow container -->
-<div class="slideshow-container">
+<div class="slideshow-container" id="recent">
   <h1>Recent Projects</h1>
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
@@ -117,7 +118,8 @@ function showSlides(n) {
 	<p>between the artist and client. Prices for showcased artwork are set by the artist.</p>
   </div>
 
-  <div class="row-padding grayscale">
+  <div class="row-padding grayscale" id="toprated">
+	<h1>Top Artists</h1>
     <div class="col l3 m6 margin-bottom">
       <img src="assets/artist_silhouette.jpg" alt="John" style="width:100%">
       <h3>John Doe</h3>
@@ -137,7 +139,7 @@ function showSlides(n) {
 		</form>
 	  </div>
       <p>Rating reflects customer satisfaction of completed projects.</p>
-      <a href="cUserProfile.html"><button class="button light-grey block">Contact</button> </a>
+      <a href="/cUserProfile.html"><button class="button light-grey block">Contact</button> </a>
     </div>
     <div class="col l3 m6 margin-bottom">
       <img src="assets/artist_silhouette.jpg" alt="Jane" style="width:100%">
@@ -158,7 +160,7 @@ function showSlides(n) {
 		</form>
 	  </div>
 	  <p>Rating reflects customer satisfaction of completed projects.</p>
-      <a href="cUserProfile.html"><button class="button light-grey block">Contact</button> </a>
+      <a href="/cUserProfile.html"><button class="button light-grey block">Contact</button> </a>
     </div>
     <div class="col l3 m6 margin-bottom">
       <img src="assets/artist_silhouette.jpg" alt="Nade" style="width:100%">
@@ -179,7 +181,7 @@ function showSlides(n) {
 		</form>
 	  </div>
 	  <p>Rating reflects customer satisfaction of completed projects.</p>
-      <a href="cUserProfile.html"><button class="button light-grey block">Contact</button> </a>
+      <a href="/cUserProfile.html"><button class="button light-grey block">Contact</button> </a>
     </div>
     <div class="col l3 m6 margin-bottom">
       <img src="assets/artist_silhouette.jpg" alt="Dane" style="width:100%">
@@ -200,24 +202,10 @@ function showSlides(n) {
 		</form>
 	  </div>
 	  <p>Rating reflects customer satisfaction of completed projects.</p>
-      <a href="cUserProfile.html"><button class="button light-grey block">Contact</button> </a>
+      <a href="/cUserProfile.html"><button class="button light-grey block">Contact</button> </a>
     </div>
   </div>
   
-  <!-- Contact Section -->
-  <div class="container padding-32" id="contact">
-    <h3 class="border-bottom border-light-grey padding-16">Contact Us</h3>
-    <p>Lets get in touch to discuss your next project.</p>
-    <form action="/action_page.php" target="_blank">
-      <input class="input section border" type="text" placeholder="Email" required name="Email">
-      <input class="input section border" type="text" placeholder="Subject" required name="Subject">
-      <input class="input section border" type="text" placeholder="Message" required name="Message">
-      <button class="button black section" type="submit">
-        <i class="fa fa-paper-plane"></i> CREATE EMAIL
-      </button>
-    </form>
-  </div>
-
 <!-- End page content -->
 </div>
 
