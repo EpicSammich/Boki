@@ -12,7 +12,8 @@
 <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.css" />
 <!--Custom CSS compiled with Sass (use VS Code to compile Sass code)-->
 <link rel="stylesheet" href="css/main.min.css">
-<link rel="stylesheet" href="bokiHomePage.css">
+<link rel="stylesheet" href="css/bokiHomePage.css">
+        <link rel="stylesheet" href="css/rating.css">
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -52,6 +53,23 @@
         <p>Portfoilo Link: <span id="thisUserPortf"></span></p>
         <p>User role: <span id="thisUserRole"></span></p>
         <p>User Rating: <span id="thisUserRating"></span></p>
+            <div class="stars">
+                <p>Rate this user?:
+  		  <form>
+  		    <input class="star star-5" id="star-5" type="radio" name="star" value="5"/>
+  		    <label class="star star-5" for="star-5"></label>
+  		    <input class="star star-4" id="star-4" type="radio" name="star" value="4"/>
+  		    <label class="star star-4" for="star-4"></label>
+  		    <input class="star star-3" id="star-3" type="radio" name="star" value="3"/>
+  		    <label class="star star-3" for="star-3"></label>
+  		    <input class="star star-2" id="star-2" type="radio" name="star" value="2"/>
+  		    <label class="star star-2" for="star-2"></label>
+  		    <input class="star star-1" id="star-1" type="radio" name="star" value="1"/>
+  		    <label class="star star-1" for="star-1"></label>
+  		  </form>
+  	    </div>
+            <input type="submit" onclick="changeRating()" value="Rate User">
+            </p>
         <p>Total User Ratings: <span id="thisUserTotalRatings"></span></p>
         </div>
         </div>
